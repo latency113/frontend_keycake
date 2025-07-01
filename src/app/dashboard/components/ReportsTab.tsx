@@ -48,11 +48,21 @@ const ReportsTab: React.FC<ReportsTabProps> = ({ orders }) => {
             <Package size={20} />
             รายงานการจองรายวัน
           </h3>
-          <div className="space-y-2">
+          <div className="space-y-4">
             {orders.map((order) => (
-              <div key={order.id} className="text-sm border-b pb-2">
-                <div className="font-medium">{order.department}</div>
-                <div className="text-gray-600">฿{order.total.toLocaleString()}</div>
+              <div key={order.id} className="text-sm border-b pb-3">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-bold text-base">{order.department}</span>
+                  <span className="text-gray-700 font-semibold">฿{order.total.toLocaleString()}</span>
+                </div>
+                <div className="pl-4 space-y-1">
+                  {order.items.map(item => (
+                    <div key={item.product} className="flex justify-between text-gray-600">
+                      <span>{item.product} </span>
+                      <span>ราคา {item.price} บาท x{item.quantity}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

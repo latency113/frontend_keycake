@@ -6,4 +6,5 @@ export interface Order {
   items: { product: string; quantity: number; price: number }[];
   total: number;
   status: 'pending' | 'confirmed' | 'completed';
+  isPickedUp?: boolean; // เพิ่มสถานะการรับเค้ก
 }

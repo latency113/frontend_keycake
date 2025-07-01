@@ -12,7 +12,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, setActiveTab }) => (
     {[
       { id: 'dashboard', label: 'แดชบอร์ด', icon: TrendingUp },
       { id: 'orders', label: 'คำสั่งซื้อ', icon: Package },
-      { id: 'reports', label: 'รายงาน', icon: FileText }
+      { id: 'reports', label: 'รายงาน', icon: FileText },
+      { id: 'pickup', label: 'รับเค้ก', icon: Package },
     ].map((tab) => {
       const Icon = tab.icon;
       return (

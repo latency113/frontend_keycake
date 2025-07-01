@@ -7,6 +7,7 @@ import Navigation from './components/Navigation';
 import DashboardTab from './components/DashboardTab';
 import OrdersTab from './components/OrdersTab';
 import ReportsTab from './components/ReportsTab';
+import PickupTab from './components/PickupTab';
 import { Order } from './components/types';
 import { CAKE_PRODUCTS, COOKIE_PRODUCTS } from './components/data';
 
@@ -98,6 +99,7 @@ const DashboardPage: React.FC = () => {
           />
         )}
         {activeTab === 'reports' && <ReportsTab orders={orders} />}
+        {activeTab === 'pickup' && <PickupTab orders={orders} setOrders={setOrders} />}
       </div>
     </div>
   );

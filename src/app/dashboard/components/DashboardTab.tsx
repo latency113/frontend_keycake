@@ -3,12 +3,20 @@ import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 import { TrendingUp, Award, DollarSign, MapPin, Package } from 'lucide-react';
 import { Order } from './types';
+import * as XLSX from 'xlsx';
 
 interface DashboardTabProps {
   orders: Order[];
 }
 
 const DashboardTab: React.FC<DashboardTabProps> = ({ orders }) => {
+  const handleDownloadDepartmentSales = () => {
+    const ws = XLSX.utils.json_to_sheet(departmentChartData);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "ยอดขายตามสาขา");
+    XLSX.writeFile(wb, "ยอดขายตามสาขา.xlsx");
+  };
+
   // Analytics data
   const dailySales = orders.reduce((acc, order) => {
     const date = order.date;
@@ -107,6 +115,12 @@ const DashboardTab: React.FC<DashboardTabProps> = ({ orders }) => {
             <MapPin size={20} />
             ยอดขายตามสาขา
           </h3>
+          <button 
+            onClick={handleDownloadDepartmentSales}
+            className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 mb-4"
+          >
+            ดาวน์โหลด Excel
+          </button>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={departmentChartData}>
               <CartesianGrid strokeDasharray="3 3" />
