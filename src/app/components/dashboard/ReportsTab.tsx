@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Calendar, Package, Award } from 'lucide-react';
-import { Order } from './types';
+import { Order } from '../../types';
 
 interface ReportsTabProps {
   orders: Order[];

@@ -1,15 +1,16 @@
 
-'use client'
+"use client"
 
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import DashboardTab from './components/DashboardTab';
-import OrdersTab from './components/OrdersTab';
-import ReportsTab from './components/ReportsTab';
-import PickupTab from './components/PickupTab';
-import { Order } from './components/types';
-import { CAKE_PRODUCTS, COOKIE_PRODUCTS } from './components/data';
+import Header from '../components/dashboard/Header';
+import Navigation from '../components/dashboard/Navigation';
+import DashboardTab from '../components/dashboard/DashboardTab';
+import OrdersTab from '../components/dashboard/OrdersTab';
+import ReportsTab from '../components/dashboard/ReportsTab';
+import PickupTab from '../components/dashboard/PickupTab';
+import { Order } from '../types';
+import { CAKE_PRODUCTS, COOKIE_PRODUCTS } from '../components/dashboard/data';
+
 
 const DashboardPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
