@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Order } from './types';
+import { Order } from '../../types';
 
 interface PickupTabProps {
   orders: Order[];

@@ -2,7 +2,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 import { TrendingUp, Award, DollarSign, MapPin, Package } from 'lucide-react';
-import { Order } from './types';
+import { Order } from '../../types';
 import * as XLSX from 'xlsx';
 
 interface DashboardTabProps {

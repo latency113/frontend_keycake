@@ -1,11 +1,38 @@
 
-export const CAKE_PRODUCTS = {
-  'เค้กครีม': { unit: 'ปอนด์', price: 190 },
-  'เค้กแยม': { unit: 'ปอนด์', price: 200 },
-  'เค้กกาแฟ': { unit: 'ปอนด์', price: 200 },
-  'เค้กช็อกโกแลต': { unit: 'ปอนด์', price: 250 },
-  'เค้กบัตเตอร์': { unit: 'ชิ้น', price: 80 }
-};
+export const CAKE_PRODUCTS = 
+  [
+    {
+      id:1,
+    name:'เค้กครีม',
+    unit: 'ปอนด์', 
+    price: 190,
+  },
+  {
+    
+    id:2,
+    name:'เค้กแยม',  
+    unit: 'ปอนด์', 
+    price: 200 ,
+  },
+  {
+    id:3,
+    name:'เค้กกาแฟ',
+    unit: 'ปอนด์', 
+    price: 200,
+  },
+  {
+    id:4,
+    name:'เค้กช็อกโกแลต',
+    unit: 'ปอนด์', 
+    price: 250 
+  },
+  {
+    id:5,
+    name:'เค้กบัตเตอร์',
+    unit: 'ชิ้น', 
+    price: 80 
+  } 
+  ];
 
 export const COOKIE_PRODUCTS = {
   'คุกกี้เนยสด (กล่องเล็ก)': { unit: 'กล่อง', price: 150 },
